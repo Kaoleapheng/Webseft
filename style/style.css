@@ -22,8 +22,14 @@
 .center a{
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: small;
+    font-size: 16px;
     color: #7f8c8d;
+    background-color:honeydew;
+    padding: 8px 20px;
+    border:1px solid burlywood;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin:0 5px;
 }
 .center a:hover{
     color:black;
@@ -63,4 +69,31 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
+footer {
+    background-color: #f9f9f9; /* ពណ៌ស្រដៀងនឹង Background របស់អ្នក */
+    color: #7f8c8d;            /* ពណ៌អក្សរប្រផេះស្រាល */
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+    margin-top: 50px;          /* ចន្លោះពីអត្ថបទខាងលើមក Footer */
+    width: 100%;
+}
+
+.footer-content p {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
 }
