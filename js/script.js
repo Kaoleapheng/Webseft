@@ -12,7 +12,21 @@ $(document).ready(function(){
     if(hour >= 17){
         message = "Good Evening"
     }
-    $('#headingtext').empty().append(message +"!" + " From Kao Leapheng")
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            // នៅពេល Scroll មកដល់៖ ថែម Class "show" ដើម្បីបង្ហាញ Animation
+            entry.target.classList.add('show');
+        } else {
+            // នៅពេល Scroll ចេញបាត់៖ ដក Class "show" ចេញវិញ ដើម្បីឱ្យវាអាចលោតម្ដងទៀត
+            entry.target.classList.remove('show');
+        }
+    });
+}, {
+    threshold: 0.1 // កំណត់ឱ្យដើរនៅពេលឃើញអក្សរប្រហែល 10%
+});
 
+const hiddenElements = document.querySelectorAll('.animate-text');
+hiddenElements.forEach((el) => observer.observe(el));
     
 })
